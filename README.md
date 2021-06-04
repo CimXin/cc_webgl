@@ -1,2 +1,2 @@
-# cc_webgl
-sss
+# hello-world
+Hello world new project template.
