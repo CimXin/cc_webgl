@@ -14,4 +14,13 @@ export class SpriteCustomRender extends cc.Sprite {
     onLoad() {
         cc.dynamicAtlasManager.enabled = false;
     }
+
+    public get uvs() {
+        return [
+            0, 0.5,
+            0.5, 0.5,
+            0, 0,
+            0.5, 0,
+            0, 1, 1, 1, 0, 0, 1, 0,];
+    }
 }

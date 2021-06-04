@@ -7,7 +7,7 @@
  * Date: 2020-07-13 02:44:17
  * LastEditors: GT<caogtaa@gmail.com>
  * LastEditTime: 2020-07-22 14:04:43
-*/ 
+*/
 
 // 自定义渲染
 // https://docs.cocos.com/creator/manual/zh/advanced-topics/custom-render.html#%E8%87%AA%E5%AE%9A%E4%B9%89-assembler
@@ -33,7 +33,7 @@ export default class GDAssembler2D extends cc.Assembler {
     // vdata offset info
     uvOffset = 2;
     colorOffset = 4;
-    
+
     protected _renderData: cc.RenderData = null;
     protected _local: any = null;          // 中间结果。[l,b,r,t]。node对象左下、右上顶点的本地坐标，即相对于锚点的偏移
 
@@ -55,7 +55,7 @@ export default class GDAssembler2D extends cc.Assembler {
 
     initData() {
         let data = this._renderData;
-        data.createQuadData(0, this.verticesFloats, this.indicesCount);
+        data.createQuadData(0, this.verticesFloats, this.indicesCount * 2);
         // createQuadData内部会调用initQuadIndices初始化索引信息
         // 如果是用用flexbuffer创建则需要自己初始化
     }
@@ -83,15 +83,15 @@ export default class GDAssembler2D extends cc.Assembler {
         return cc.renderer._handle._meshBuffer;
     }
 
-    updateWorldVerts(comp) {
+    updateWorldVerts(comp, index) {
         if (CC_NATIVERENDERER) {
             this.updateWorldVertsNative(comp);
         } else {
-            this.updateWorldVertsWebGL(comp);
+            this.updateWorldVertsWebGL(comp, index);
         }
     }
 
-    updateWorldVertsWebGL(comp) {
+    updateWorldVertsWebGL(comp, index) {
         let local = this._local;
         let verts = this._renderData.vDatas[0];
 
@@ -102,7 +102,7 @@ export default class GDAssembler2D extends cc.Assembler {
 
         let vl = local[0], vr = local[2],
             vb = local[1], vt = local[3];
-        
+
         /*
         m00 = 1, m01 = 0, m02 = 0, m03 = 0,
         m04 = 0, m05 = 1, m06 = 0, m07 = 0,
@@ -116,48 +116,49 @@ export default class GDAssembler2D extends cc.Assembler {
 
         // render data = verts = x|y|u|v|color|x|y|u|v|color|...
         // 填充render data中4个顶点的xy部分
-        let index = 0;
+        // let index = 0;
+        index = index * 5 * 4;
         let floatsPerVert = this.floatsPerVert;
         if (justTranslate) {
             // left bottom
             verts[index] = vl + tx;
-            verts[index+1] = vb + ty;
+            verts[index + 1] = vb + ty;
             index += floatsPerVert;
             // right bottom
             verts[index] = vr + tx;
-            verts[index+1] = vb + ty;
+            verts[index + 1] = vb + ty;
             index += floatsPerVert;
             // left top
             verts[index] = vl + tx;
-            verts[index+1] = vt + ty;
+            verts[index + 1] = vt + ty;
             index += floatsPerVert;
             // right top
             verts[index] = vr + tx;
-            verts[index+1] = vt + ty;
+            verts[index + 1] = vt + ty;
         } else {
             // 4对xy分别乘以 [2,2]仿射矩阵，然后+平移量
             let al = a * vl, ar = a * vr,
-            bl = b * vl, br = b * vr,
-            cb = c * vb, ct = c * vt,
-            db = d * vb, dt = d * vt;
+                bl = b * vl, br = b * vr,
+                cb = c * vb, ct = c * vt,
+                db = d * vb, dt = d * vt;
 
             // left bottom
             // newx = vl * a + vb * c + tx
             // newy = vl * b + vb * d + ty
             verts[index] = al + cb + tx;
-            verts[index+1] = bl + db + ty;
+            verts[index + 1] = bl + db + ty;
             index += floatsPerVert;
             // right bottom
             verts[index] = ar + cb + tx;
-            verts[index+1] = br + db + ty;
+            verts[index + 1] = br + db + ty;
             index += floatsPerVert;
             // left top
             verts[index] = al + ct + tx;
-            verts[index+1] = bl + dt + ty;
+            verts[index + 1] = bl + dt + ty;
             index += floatsPerVert;
             // right top
             verts[index] = ar + ct + tx;
-            verts[index+1] = br + dt + ty;
+            verts[index + 1] = br + dt + ty;
         }
     }
 
@@ -167,34 +168,35 @@ export default class GDAssembler2D extends cc.Assembler {
         let local = this._local;
         let verts = this._renderData.vDatas[0];
         let floatsPerVert = this.floatsPerVert;
-      
+
         let vl = local[0],
             vr = local[2],
             vb = local[1],
             vt = local[3];
-      
+
         let index: number = 0;
         // left bottom
         verts[index] = vl;
-        verts[index+1] = vb;
+        verts[index + 1] = vb;
         index += floatsPerVert;
         // right bottom
         verts[index] = vr;
-        verts[index+1] = vb;
+        verts[index + 1] = vb;
         index += floatsPerVert;
         // left top
         verts[index] = vl;
-        verts[index+1] = vt;
+        verts[index + 1] = vt;
         index += floatsPerVert;
         // right top
         verts[index] = vr;
-        verts[index+1] = vt;
+        verts[index + 1] = vt;
     }
 
     // 将准备好的顶点数据填充进 VertexBuffer 和 IndiceBuffer
     fillBuffers(comp, renderer) {
         if (renderer.worldMatDirty) {
-            this.updateWorldVerts(comp);
+            this.updateWorldVerts(comp, 0);
+            this.updateWorldVerts(comp, 1);
         }
 
         let renderData = this._renderData;
@@ -202,7 +204,7 @@ export default class GDAssembler2D extends cc.Assembler {
         let iData = renderData.iDatas[0];
 
         let buffer = this.getBuffer(/*renderer*/);
-        let offsetInfo = buffer.request(this.verticesCount, this.indicesCount);
+        let offsetInfo = buffer.request(this.verticesCount, this.indicesCount * 2);
 
         // buffer data may be realloc, need get reference after request.
 
@@ -220,14 +222,28 @@ export default class GDAssembler2D extends cc.Assembler {
         let ibuf = buffer._iData,
             indiceOffset = offsetInfo.indiceOffset,
             vertexId = offsetInfo.vertexOffset;             // vertexId是已经在buffer里的顶点数，也是当前顶点序号的基数
-        for (let i = 0, l = iData.length; i < l; i++) {
-            ibuf[indiceOffset++] = vertexId + iData[i];
-        }
+        // for (let i = 0, l = iData.length; i < l; i++) {
+        //     ibuf[indiceOffset++] = vertexId + iData[i];
+        // }
+        ibuf[0] = 0;
+        ibuf[1] = 1;
+        ibuf[2] = 2;
+        ibuf[3] = 1;
+        ibuf[4] = 3;
+        ibuf[5] = 2;
+
+        // ibuf[0 + 6] = 0 + 4;
+        // ibuf[1 + 6] = 1 + 4;
+        // ibuf[2 + 6] = 2 + 4;
+        // ibuf[3 + 6] = 1 + 4;
+        // ibuf[4 + 6] = 3 + 4;
+        // ibuf[5 + 6] = 2 + 4;
+
     }
 
     packToDynamicAtlas(comp, frame) {
         if (CC_TEST) return;
-        
+
         if (!frame._original && cc.dynamicAtlasManager && frame._texture.packable) {
             let packedFrame = cc.dynamicAtlasManager.insertSpriteFrame(frame);
             //@ts-ignore
@@ -237,7 +253,7 @@ export default class GDAssembler2D extends cc.Assembler {
         }
         let material = comp._materials[0];
         if (!material) return;
-        
+
         if (material.getProperty('texture') !== frame._texture) {
             // texture was packed to dynamic atlas, should update uvs
             comp._vertsDirty = true;
@@ -270,7 +286,7 @@ export default class GDAssembler2D extends cc.Assembler {
             appx: number = node.anchorX * cw,
             appy: number = node.anchorY * ch,
             l: number,
-            b: number, 
+            b: number,
             r: number,
             t: number;
 
@@ -284,7 +300,8 @@ export default class GDAssembler2D extends cc.Assembler {
         local[1] = b;
         local[2] = r;
         local[3] = t;
-        this.updateWorldVerts(comp);
+        this.updateWorldVerts(comp, 0);
+        this.updateWorldVerts(comp, 1);
     }
 
     public updateRenderData(comp: cc.RenderComponent) {
