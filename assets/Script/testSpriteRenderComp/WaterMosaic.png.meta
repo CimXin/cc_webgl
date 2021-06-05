@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "21e8d59f-290e-4731-bf41-85db895fb30b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 390,
+  "height": 390,
+  "platformSettings": {},
+  "subMetas": {
+    "WaterMosaic": {
+      "ver": "1.0.4",
+      "uuid": "850b2b8d-6225-4193-9987-30d4638f69db",
+      "rawTextureUuid": "21e8d59f-290e-4731-bf41-85db895fb30b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 390,
+      "height": 390,
+      "rawWidth": 390,
+      "rawHeight": 390,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -15,7 +15,7 @@ import { SpriteCustomRender } from "./SpriteCustomRender";
 
 export default class GDSimpleSpriteAssembler2D extends GDAssembler2D {
     // 这部分使用SimpleSpriteAssembler的内容
-    updateRenderData(sprite: cc.Sprite) {
+    updateRenderData(sprite: SpriteCustomRender) {
         this.packToDynamicAtlas(sprite, sprite._spriteFrame);
         super.updateRenderData(sprite);
     }
@@ -25,7 +25,7 @@ export default class GDSimpleSpriteAssembler2D extends GDAssembler2D {
         let uvOffset = this.uvOffset;
         let floatsPerVert = this.floatsPerVert;
         let verts = this._renderData.vDatas[0];
-        for (let i = 0; i < 4 * 2; i++) {
+        for (let i = 0; i < 4 * sprite.spriteCount; i++) {
             let srcOffset = i * 2;
             let dstOffset = floatsPerVert * i + uvOffset;
             verts[dstOffset] = uv[srcOffset];
@@ -35,8 +35,8 @@ export default class GDSimpleSpriteAssembler2D extends GDAssembler2D {
 
     updateVerts(sprite) {
         let node = sprite.node,
-            cw = node.width / 2,
-            ch = node.height / 2,
+            cw = 60,//node.width / 2,
+            ch = 60,//node.height / 2,
             appx = node.anchorX * cw, appy = node.anchorY * ch,
             l, b, r, t;
         if (sprite.trim) {
@@ -66,7 +66,11 @@ export default class GDSimpleSpriteAssembler2D extends GDAssembler2D {
         local[1] = b;
         local[2] = r;
         local[3] = t;
-        this.updateWorldVerts(sprite, 0);
-        this.updateWorldVerts(sprite, 1);
+
+        for (let i = 0; i < sprite.spriteCount; i++) {
+            this.updateWorldVerts(sprite, i);
+        }
+        // this.updateWorldVerts(sprite, 0);
+        // this.updateWorldVerts(sprite, 1);
     }
 }

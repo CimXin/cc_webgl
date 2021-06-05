@@ -3,6 +3,8 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
+import { SpriteCustomRender } from "./SpriteCustomRender";
+
 /*
  * Date: 2020-07-13 02:44:17
  * LastEditors: GT<caogtaa@gmail.com>
@@ -26,7 +28,7 @@ export default class GDAssembler2D extends cc.Assembler {
     // 顶点属性数据排列，每一格是32位 (float32/uint32)
     // x|y|u|v|color|x|y|u|v|color|...
     // 其中uv在一组数据中的偏移是2，color的偏移是4
-    verticesCount = 4 * 2;
+    verticesCount = 4;
     indicesCount = 6;
     floatsPerVert = 5;
 
@@ -50,12 +52,12 @@ export default class GDAssembler2D extends cc.Assembler {
     }
 
     get verticesFloats() {
-        return this.verticesCount * this.floatsPerVert;
+        return this.verticesCount * this.floatsPerVert * 100;
     }
 
     initData() {
         let data = this._renderData;
-        data.createQuadData(0, this.verticesFloats, this.indicesCount * 2);
+        data.createQuadData(0, this.verticesFloats, this.indicesCount * 100);
         // createQuadData内部会调用initQuadIndices初始化索引信息
         // 如果是用用flexbuffer创建则需要自己初始化
     }
@@ -84,127 +86,29 @@ export default class GDAssembler2D extends cc.Assembler {
     }
 
     updateWorldVerts(comp, index) {
-        if (CC_NATIVERENDERER) {
-            this.updateWorldVertsNative(comp);
-        } else {
-            this.updateWorldVertsWebGL(comp, index);
-        }
+        this.updateWorldVertsWebGL(comp, index);
     }
 
-    updateWorldVertsWebGL(comp, index) {
-        let local = this._local;
-        let verts = this._renderData.vDatas[0];
-
-        let matrix = comp.node._worldMatrix;
-        let matrixm = matrix.m,
-            a = matrixm[0], b = matrixm[1], c = matrixm[4], d = matrixm[5],
-            tx = matrixm[12], ty = matrixm[13];
-
-        let vl = local[0], vr = local[2],
-            vb = local[1], vt = local[3];
-
-        /*
-        m00 = 1, m01 = 0, m02 = 0, m03 = 0,
-        m04 = 0, m05 = 1, m06 = 0, m07 = 0,
-        m08 = 0, m09 = 0, m10 = 1, m11 = 0,
-        m12 = 0, m13 = 0, m14 = 0, m15 = 1
-        */
-        // [a,b,c,d] = _worldMatrix[1,2,4,5] == [1,0,0,1]
-        // _worldMatrix[12,13]是xy的平移量
-        // 即世界矩阵的左上角2x2是单元矩阵，说明在2D场景内没有出现旋转或者缩放
-        let justTranslate = a === 1 && b === 0 && c === 0 && d === 1;
-
-        // render data = verts = x|y|u|v|color|x|y|u|v|color|...
-        // 填充render data中4个顶点的xy部分
-        // let index = 0;
-        index = index * 5 * 4;
-        let floatsPerVert = this.floatsPerVert;
-        if (justTranslate) {
-            // left bottom
-            verts[index] = vl + tx;
-            verts[index + 1] = vb + ty;
-            index += floatsPerVert;
-            // right bottom
-            verts[index] = vr + tx;
-            verts[index + 1] = vb + ty;
-            index += floatsPerVert;
-            // left top
-            verts[index] = vl + tx;
-            verts[index + 1] = vt + ty;
-            index += floatsPerVert;
-            // right top
-            verts[index] = vr + tx;
-            verts[index + 1] = vt + ty;
-        } else {
-            // 4对xy分别乘以 [2,2]仿射矩阵，然后+平移量
-            let al = a * vl, ar = a * vr,
-                bl = b * vl, br = b * vr,
-                cb = c * vb, ct = c * vt,
-                db = d * vb, dt = d * vt;
-
-            // left bottom
-            // newx = vl * a + vb * c + tx
-            // newy = vl * b + vb * d + ty
-            verts[index] = al + cb + tx;
-            verts[index + 1] = bl + db + ty;
-            index += floatsPerVert;
-            // right bottom
-            verts[index] = ar + cb + tx;
-            verts[index + 1] = br + db + ty;
-            index += floatsPerVert;
-            // left top
-            verts[index] = al + ct + tx;
-            verts[index + 1] = bl + dt + ty;
-            index += floatsPerVert;
-            // right top
-            verts[index] = ar + ct + tx;
-            verts[index + 1] = br + dt + ty;
-        }
-    }
-
-    // native场景下使用的updateWorldVerts
-    // copy from \jsb-adapter-master\engine\assemblers\assembler-2d.js
-    updateWorldVertsNative(comp) {
-        let local = this._local;
-        let verts = this._renderData.vDatas[0];
-        let floatsPerVert = this.floatsPerVert;
-
-        let vl = local[0],
-            vr = local[2],
-            vb = local[1],
-            vt = local[3];
-
-        let index: number = 0;
-        // left bottom
-        verts[index] = vl;
-        verts[index + 1] = vb;
-        index += floatsPerVert;
-        // right bottom
-        verts[index] = vr;
-        verts[index + 1] = vb;
-        index += floatsPerVert;
-        // left top
-        verts[index] = vl;
-        verts[index + 1] = vt;
-        index += floatsPerVert;
-        // right top
-        verts[index] = vr;
-        verts[index + 1] = vt;
-    }
 
     // 将准备好的顶点数据填充进 VertexBuffer 和 IndiceBuffer
-    fillBuffers(comp, renderer) {
+    fillBuffers(comp: SpriteCustomRender, renderer) {
         if (renderer.worldMatDirty) {
-            this.updateWorldVerts(comp, 0);
-            this.updateWorldVerts(comp, 1);
+            // this.updateWorldVerts(comp, 0);
+            // this.updateWorldVerts(comp, 1);
+
+            for (let i = 0; i < comp.spriteCount; i++) {
+                this.updateWorldVerts(comp, i);
+            }
         }
 
         let renderData = this._renderData;
         let vData = renderData.vDatas[0];
         let iData = renderData.iDatas[0];
 
+        this.verticesCount = 4 * comp.spriteCount;
+
         let buffer = this.getBuffer(/*renderer*/);
-        let offsetInfo = buffer.request(this.verticesCount, this.indicesCount * 2);
+        let offsetInfo = buffer.request(this.verticesCount, this.indicesCount * comp.spriteCount);
 
         // buffer data may be realloc, need get reference after request.
 
@@ -222,23 +126,9 @@ export default class GDAssembler2D extends cc.Assembler {
         let ibuf = buffer._iData,
             indiceOffset = offsetInfo.indiceOffset,
             vertexId = offsetInfo.vertexOffset;             // vertexId是已经在buffer里的顶点数，也是当前顶点序号的基数
-        // for (let i = 0, l = iData.length; i < l; i++) {
-        //     ibuf[indiceOffset++] = vertexId + iData[i];
-        // }
-        ibuf[0] = 0;
-        ibuf[1] = 1;
-        ibuf[2] = 2;
-        ibuf[3] = 1;
-        ibuf[4] = 3;
-        ibuf[5] = 2;
-
-        // ibuf[0 + 6] = 0 + 4;
-        // ibuf[1 + 6] = 1 + 4;
-        // ibuf[2 + 6] = 2 + 4;
-        // ibuf[3 + 6] = 1 + 4;
-        // ibuf[4 + 6] = 3 + 4;
-        // ibuf[5 + 6] = 2 + 4;
-
+        for (let i = 0, l = iData.length; i < l; i++) {
+            ibuf[indiceOffset++] = vertexId + iData[i];
+        }
     }
 
     packToDynamicAtlas(comp, frame) {
@@ -279,7 +169,7 @@ export default class GDAssembler2D extends cc.Assembler {
         }
     }
 
-    protected updateVerts(comp: cc.RenderComponent) {
+    protected updateVerts(comp: SpriteCustomRender) {
         let node: cc.Node = comp.node,
             cw: number = node.width,
             ch: number = node.height,
@@ -300,15 +190,99 @@ export default class GDAssembler2D extends cc.Assembler {
         local[1] = b;
         local[2] = r;
         local[3] = t;
-        this.updateWorldVerts(comp, 0);
-        this.updateWorldVerts(comp, 1);
+        for (let i = 0; i < comp.spriteCount; i++) {
+            this.updateWorldVerts(comp, i);
+        }
+        // this.updateWorldVerts(comp, 1);
     }
 
-    public updateRenderData(comp: cc.RenderComponent) {
+    public updateRenderData(comp: SpriteCustomRender) {
         if (comp._vertsDirty) {
             this.updateUVs(comp);
             this.updateVerts(comp);
             comp._vertsDirty = false;
         }
     }
+
+    /** 更新图片的世界坐标点 */
+    updateWorldVertsWebGL(comp, index) {
+        let local = this._local;
+        let verts = this._renderData.vDatas[0];
+
+        let matrix = comp.node._worldMatrix;
+        let matrixm = matrix.m,
+            a = matrixm[0], b = matrixm[1], c = matrixm[4], d = matrixm[5],
+            tx = matrixm[12], ty = matrixm[13];
+
+        let vl = local[0], vr = local[2],
+            vb = local[1], vt = local[3];
+
+        /*
+        m00 = 1, m01 = 0, m02 = 0, m03 = 0,
+        m04 = 0, m05 = 1, m06 = 0, m07 = 0,
+        m08 = 0, m09 = 0, m10 = 1, m11 = 0,
+        m12 = 0, m13 = 0, m14 = 0, m15 = 1
+        */
+        // [a,b,c,d] = _worldMatrix[1,2,4,5] == [1,0,0,1]
+        // _worldMatrix[12,13]是xy的平移量
+        // 即世界矩阵的左上角2x2是单元矩阵，说明在2D场景内没有出现旋转或者缩放
+        let justTranslate = a === 1 && b === 0 && c === 0 && d === 1;
+
+        // render data = verts = x|y|u|v|color|x|y|u|v|color|...
+        // 填充render data中4个顶点的xy部分
+        // let index = 0;
+        let curCount = index;
+        index = index * 5 * 4;
+        let floatsPerVert = this.floatsPerVert;
+
+        //存储的sprite的局部坐标点
+
+        let spritePoses = comp.spritePoses;
+
+        let jx = spritePoses[curCount * 2 + 0];
+        let jy = spritePoses[curCount * 2 + 1];
+
+        if (justTranslate) {
+            // left bottom
+            verts[index] = vl + tx + jx;
+            verts[index + 1] = vb + ty + jy;
+            index += floatsPerVert;
+            // right bottom
+            verts[index] = vr + tx + jx;
+            verts[index + 1] = vb + ty + jy;
+            index += floatsPerVert;
+            // left top
+            verts[index] = vl + tx + jx;
+            verts[index + 1] = vt + ty + jy;
+            index += floatsPerVert;
+            // right top
+            verts[index] = vr + tx + jx;
+            verts[index + 1] = vt + ty + jy;
+        } else {
+            // 4对xy分别乘以 [2,2]仿射矩阵，然后+平移量
+            let al = a * vl, ar = a * vr,
+                bl = b * vl, br = b * vr,
+                cb = c * vb, ct = c * vt,
+                db = d * vb, dt = d * vt;
+
+            // left bottom
+            // newx = vl * a + vb * c + tx
+            // newy = vl * b + vb * d + ty
+            verts[index] = al + cb + tx;
+            verts[index + 1] = bl + db + ty;
+            index += floatsPerVert;
+            // right bottom
+            verts[index] = ar + cb + tx;
+            verts[index + 1] = br + db + ty;
+            index += floatsPerVert;
+            // left top
+            verts[index] = al + ct + tx;
+            verts[index + 1] = bl + dt + ty;
+            index += floatsPerVert;
+            // right top
+            verts[index] = ar + ct + tx;
+            verts[index + 1] = br + dt + ty;
+        }
+    }
+
 }
