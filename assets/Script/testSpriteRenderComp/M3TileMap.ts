@@ -1,46 +1,40 @@
-import GDSimpleSpriteAssembler2D from "./GDSimpleSpriteAssembler2D";
+import M3TileMapAssembler2D from "./M3TileMapAssembler2D";
 
 
 const { ccclass, property } = cc._decorator;
 @ccclass
-export class SpriteCustomRender extends cc.Sprite {
+export class M3TileMap extends cc.Sprite {
+    /** 显示sprites的uv点的数据 */
+    private _spriteUvs = [];
+    /** 显示sprites的坐标点的数据 */
+    private _spritePoses = [];
+    /** 显示sprite的个数 */
+    private _spriteCount = 0;
 
-    public get spriteCount() {
-        return this._spriteCount;
-    }
     public _resetAssembler() {
         this.setVertsDirty();
-        this._assembler = new GDSimpleSpriteAssembler2D();
+        this._assembler = new M3TileMapAssembler2D();
         this._assembler.init(this);
     }
 
     onLoad() {
         cc.dynamicAtlasManager.enabled = false;
-
-
-
     }
 
-    start(){
-        // super.onEnable();
+    start() {
+        /** for test */
+        this.drawArea(cc.rect(30, 10, 60, 60), cc.rect(0, 0.5, 0.5, 1));
         this.drawArea(cc.rect(0, 0, 60, 60), cc.rect(0, 0.5, 0, 0.5));
         this.drawArea(cc.rect(60, 0, 60, 60), cc.rect(0, 0.5, 0.5, 1));
-        this.drawArea(cc.rect(60, 60, 60, 60), cc.rect(0, 0.5, 0.5, 1));
-        this.drawArea(cc.rect(120, 60, 60, 60), cc.rect(0, 0.2, 0.5, 1));
-        this.drawArea(cc.rect(120, 0, 60, 60), cc.rect(0, 0.5, 0.5, 1));
-
+        // this.drawArea(cc.rect(120, 60, 60, 60), cc.rect(0, 0.2, 0.5, 1));
+        // this.drawArea(cc.rect(120, 0, 60, 60), cc.rect(0, 0.5, 0.5, 1));
+        this.scheduleOnce(() => {
+            this.node.destroy();
+        }, 3)
+        /** for test */
     }
 
     public get uvs() {
-        // return [       //      c__d 
-        //     0, 0.5,    //a     |  |
-        //     0.5, 0.5,  //b     a__b 
-        //     0, 0,      //c
-        //     0.5, 0,    //d
-        //     0.5, 1,
-        //     1, 1,
-        //     0.5, 0.5,
-        //     1, 0.5];
         return this._spriteUvs;
     }
 
@@ -48,9 +42,9 @@ export class SpriteCustomRender extends cc.Sprite {
         return this._spritePoses;
     }
 
-    private _spriteUvs = [];
-    private _spritePoses = [];
-    private _spriteCount = 0;
+    public get spriteCount() {
+        return this._spriteCount;
+    }
 
     /** 必须包含坐标点 uv的坐标 */
     public drawArea(posRect: cc.Rect, uvArea: cc.Rect) {
@@ -59,6 +53,7 @@ export class SpriteCustomRender extends cc.Sprite {
         //需要把图片的坐标点 和uv的信息存储起来
         this._spritePoses.push(posRect.x, posRect.y);
         this.addUvs(uvArea);
+        this.setVertsDirty();
     }
 
     private addUvs(uvArea: cc.Rect) {
@@ -72,5 +67,11 @@ export class SpriteCustomRender extends cc.Sprite {
             x0, y0,
             x1, y0
         );
+    }
+
+    onDestroy() {
+        this._spriteUvs = null;
+        this._spritePoses = null;
+        this._spriteCount = 0;
     }
 }

@@ -1,19 +1,11 @@
-// Copyright 2020 Cao Gaoting<caogtaa@gmail.com>
-// https://caogtaa.github.io
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
 
-import { SpriteCustomRender } from "./SpriteCustomRender";
-
-/*
- * Date: 2020-07-13 02:44:17
- * LastEditors: GT<caogtaa@gmail.com>
- * LastEditTime: 2020-07-22 14:04:43
-*/
 
 // 自定义渲染
+
+import { M3TileMap } from "./M3TileMap";
+
 // https://docs.cocos.com/creator/manual/zh/advanced-topics/custom-render.html#%E8%87%AA%E5%AE%9A%E4%B9%89-assembler
-export default class GDAssembler2D extends cc.Assembler {
+export default class M3Assembler2D extends cc.Assembler {
     // 每个2d渲染单元里的有:
     // 4个顶点属性数据
     // 6个顶点索引 -> 三角剖分成2个三角形
@@ -91,11 +83,8 @@ export default class GDAssembler2D extends cc.Assembler {
 
 
     // 将准备好的顶点数据填充进 VertexBuffer 和 IndiceBuffer
-    fillBuffers(comp: SpriteCustomRender, renderer) {
+    fillBuffers(comp: M3TileMap, renderer) {
         if (renderer.worldMatDirty) {
-            // this.updateWorldVerts(comp, 0);
-            // this.updateWorldVerts(comp, 1);
-
             for (let i = 0; i < comp.spriteCount; i++) {
                 this.updateWorldVerts(comp, i);
             }
@@ -169,7 +158,7 @@ export default class GDAssembler2D extends cc.Assembler {
         }
     }
 
-    protected updateVerts(comp: SpriteCustomRender) {
+    protected updateVerts(comp: M3TileMap) {
         let node: cc.Node = comp.node,
             cw: number = node.width,
             ch: number = node.height,
@@ -193,10 +182,9 @@ export default class GDAssembler2D extends cc.Assembler {
         for (let i = 0; i < comp.spriteCount; i++) {
             this.updateWorldVerts(comp, i);
         }
-        // this.updateWorldVerts(comp, 1);
     }
 
-    public updateRenderData(comp: SpriteCustomRender) {
+    public updateRenderData(comp: M3TileMap) {
         if (comp._vertsDirty) {
             this.updateUVs(comp);
             this.updateVerts(comp);

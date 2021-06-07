@@ -1,26 +1,15 @@
-// Copyright 2020 Cao Gaoting<caogtaa@gmail.com>
-// https://caogtaa.github.io
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
 
-import GDAssembler2D from "./GDAssembler2D";
-import { SpriteCustomRender } from "./SpriteCustomRender";
+import M3Assembler2D from "./M3Assembler2D";
+import { M3TileMap } from "./M3TileMap";
 
-/*
- * Date: 2020-07-21 16:23:10
- * LastEditors: GT<caogtaa@gmail.com>
- * LastEditTime: 2020-07-22 14:04:52
-*/
-
-
-export default class GDSimpleSpriteAssembler2D extends GDAssembler2D {
+export default class M3TileMapAssembler2D extends M3Assembler2D {
     // 这部分使用SimpleSpriteAssembler的内容
-    updateRenderData(sprite: SpriteCustomRender) {
+    updateRenderData(sprite: M3TileMap) {
         this.packToDynamicAtlas(sprite, sprite._spriteFrame);
         super.updateRenderData(sprite);
     }
 
-    updateUVs(sprite: SpriteCustomRender) {
+    updateUVs(sprite: M3TileMap) {
         let uv = sprite.uvs;//sprite._spriteFrame.uv;
         let uvOffset = this.uvOffset;
         let floatsPerVert = this.floatsPerVert;
@@ -70,7 +59,5 @@ export default class GDSimpleSpriteAssembler2D extends GDAssembler2D {
         for (let i = 0; i < sprite.spriteCount; i++) {
             this.updateWorldVerts(sprite, i);
         }
-        // this.updateWorldVerts(sprite, 0);
-        // this.updateWorldVerts(sprite, 1);
     }
 }

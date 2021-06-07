@@ -1,4 +1,4 @@
-import { SpriteCustomRender } from "./SpriteCustomRender";
+import { M3TileMap } from "./M3TileMap";
 
 export class SpriterCustomAssembler extends cc.Assembler {
     private _renderData = null;
@@ -47,6 +47,7 @@ export class SpriterCustomAssembler extends cc.Assembler {
     }
 
     public getBuffer(renderer?) {
+        //@ts-ignore
         return cc.renderer._handle._meshBuffer;
     }
 
@@ -107,7 +108,7 @@ export class SpriterCustomAssembler extends cc.Assembler {
         }
     }
 
-    public fillBuffers(comp: SpriteCustomRender, renderer) {
+    public fillBuffers(comp: M3TileMap, renderer) {
         if (renderer.worldMatDirty) {
             this.updateWorldVerts(comp);
         }
