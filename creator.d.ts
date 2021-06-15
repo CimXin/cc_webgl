@@ -6764,7 +6764,12 @@ declare namespace cc {
 		insetLeft: number;		
 		/** !#en Right border of the sprite
 		!#zh sprite 的左边边框 */
-		insetRight: number;		
+		insetRight: number;	
+		/** uv的坐标 4个顶点的uv坐标，对应左下、右下、左上、右上 */
+		uv: number[];	
+		_originalSize: Size;
+		_rect: Size;
+		_offset: Vec2;
 		/**
 		!#en
 		Constructor of SpriteFrame class.

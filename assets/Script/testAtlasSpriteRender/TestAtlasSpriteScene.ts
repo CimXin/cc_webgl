@@ -14,10 +14,14 @@ export default class TestAtlasSpriteScene extends cc.Component {
     testAtlas: cc.SpriteAtlas = null;
 
 
-    start() {
-        console.error(this.tileMap);
+    onLoad() {
+        cc.dynamicAtlasManager.enabled = false;
+    }
 
-        console.error(this.testAtlas);
+    start() {
+        // console.error(this.tileMap);
+
+        // console.error(this.testAtlas);
     }
 
 }

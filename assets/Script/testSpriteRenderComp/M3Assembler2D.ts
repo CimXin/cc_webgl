@@ -2,6 +2,7 @@
 
 // 自定义渲染
 
+import { M3AtlasTileMap } from "../testAtlasSpriteRender/M3AtlasTileMap";
 import { M3TileMap } from "./M3TileMap";
 
 // https://docs.cocos.com/creator/manual/zh/advanced-topics/custom-render.html#%E8%87%AA%E5%AE%9A%E4%B9%89-assembler
@@ -158,7 +159,7 @@ export default class M3Assembler2D extends cc.Assembler {
         }
     }
 
-    protected updateVerts(comp: M3TileMap) {
+    protected updateVerts(comp: M3TileMap | M3AtlasTileMap) {
         // let node: cc.Node = comp.node,
         //     cw: number = node.width,
         //     ch: number = node.height,
@@ -189,7 +190,7 @@ export default class M3Assembler2D extends cc.Assembler {
         }
     }
 
-    public updateRenderData(comp: M3TileMap) {
+    public updateRenderData(comp: M3TileMap | M3AtlasTileMap) {
         if (comp._vertsDirty) {
             this.updateUVs(comp);
             this.updateVerts(comp);

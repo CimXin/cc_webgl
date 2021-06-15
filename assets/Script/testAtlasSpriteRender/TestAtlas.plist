@@ -7,28 +7,28 @@
             <key>Wall_bottom.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{120,18}}</string>
+                <string>{{2,2},{60,10}}</string>
                 <key>offset</key>
-                <string>{0,-51}</string>
+                <string>{0,-25}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,102},{120,18}}</string>
+                <string>{{0,50},{60,10}}</string>
                 <key>sourceSize</key>
-                <string>{120,120}</string>
+                <string>{60,60}</string>
             </dict>
             <key>Wall_top.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,2},{120,16}}</string>
+                <string>{{64,2},{60,8}}</string>
                 <key>offset</key>
-                <string>{0,52}</string>
+                <string>{0,26}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{120,16}}</string>
+                <string>{{0,0},{60,8}}</string>
                 <key>sourceSize</key>
-                <string>{120,120}</string>
+                <string>{60,60}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -38,9 +38,9 @@
             <key>realTextureFileName</key>
             <string>TestAtlas.png</string>
             <key>size</key>
-            <string>{246,22}</string>
+            <string>{126,14}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:a830b064e4ca66f8cf475e13e24ebdd2$</string>
+            <string>$TexturePacker:SmartUpdate:87c6051d35a9f559521984f48817d586$</string>
             <key>textureFileName</key>
             <string>TestAtlas.png</string>
         </dict>

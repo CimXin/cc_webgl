@@ -177,7 +177,7 @@
       "array": [
         0,
         0,
-        511.82101363660325,
+        512.6870390403877,
         0,
         0,
         0,
@@ -244,7 +244,7 @@
       "__id__": 2
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 6
@@ -362,15 +362,15 @@
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
+      "x": 0,
+      "y": 0
     },
     "_trs": {
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -8.577,
-        -9.876,
+        -204.875,
+        -99.313,
         0,
         0,
         0,
@@ -409,7 +409,9 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_spriteFrame": null,
+    "_spriteFrame": {
+      "__uuid__": "382b4f0f-322c-405a-a599-071cd397f8ee"
+    },
     "_type": 0,
     "_sizeMode": 0,
     "_fillType": 0,
@@ -420,8 +422,11 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_atlas": null,
+    "atlasTexure": {
+      "__uuid__": "c188a8f7-55d1-4525-a52a-b9b40416e8b5"
+    },
     "_id": "55OyC8suVEs63yOMKf95z/"
   },
   {
