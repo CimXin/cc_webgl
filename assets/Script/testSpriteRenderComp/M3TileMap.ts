@@ -10,6 +10,8 @@ export class M3TileMap extends cc.Sprite {
     private _spritePoses = [];
     /** 显示sprite的个数 */
     private _spriteCount = 0;
+    /** 单个sprite的宽高 */
+    private _locals = [];
 
     public _resetAssembler() {
         this.setVertsDirty();
@@ -28,9 +30,9 @@ export class M3TileMap extends cc.Sprite {
         this.drawArea(cc.rect(60, 0, 60, 60), cc.rect(0, 0.5, 0.5, 1));
         // this.drawArea(cc.rect(120, 60, 60, 60), cc.rect(0, 0.2, 0.5, 1));
         // this.drawArea(cc.rect(120, 0, 60, 60), cc.rect(0, 0.5, 0.5, 1));
-        this.scheduleOnce(() => {
-            this.node.destroy();
-        }, 3)
+        // this.scheduleOnce(() => {
+        //     this.node.destroy();
+        // }, 3)
         /** for test */
     }
 
@@ -46,14 +48,36 @@ export class M3TileMap extends cc.Sprite {
         return this._spriteCount;
     }
 
+    public get locals() {
+        return this._locals;
+    }
+
     /** 必须包含坐标点 uv的坐标 */
-    public drawArea(posRect: cc.Rect, uvArea: cc.Rect) {
+    public drawArea(rect: cc.Rect, area: cc.Rect, offset: cc.Vec2 = cc.v2()) {
         this._spriteCount++;
 
         //需要把图片的坐标点 和uv的信息存储起来
-        this._spritePoses.push(posRect.x, posRect.y);
-        this.addUvs(uvArea);
+        this._spritePoses.push(rect.x + offset.x, rect.y + offset.y);
+        this.addLocals(rect, area);
+        this.addUvs(area);
         this.setVertsDirty();
+    }
+
+    private addLocals(rect: cc.Rect, uvArea: cc.Rect) {
+        let sw = rect.width * (uvArea.y - uvArea.x);
+        let sh = rect.height * ((1 - uvArea.width) - (1 - uvArea.height));
+        let appx = this.node.anchorX * sw;
+        let appy = this.node.anchorY * sh;
+        let l, b, r, t;
+        if (this.trim) {
+            l = -appx;
+            b = -appy;
+            r = sw - appx;
+            t = sh - appy;
+        } else {
+            console.log("need todo");
+        }
+        this._locals.push(l, b, r, t);
     }
 
     private addUvs(uvArea: cc.Rect) {

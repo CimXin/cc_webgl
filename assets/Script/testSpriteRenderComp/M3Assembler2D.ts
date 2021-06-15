@@ -159,26 +159,31 @@ export default class M3Assembler2D extends cc.Assembler {
     }
 
     protected updateVerts(comp: M3TileMap) {
-        let node: cc.Node = comp.node,
-            cw: number = node.width,
-            ch: number = node.height,
-            appx: number = node.anchorX * cw,
-            appy: number = node.anchorY * ch,
-            l: number,
-            b: number,
-            r: number,
-            t: number;
+        // let node: cc.Node = comp.node,
+        //     cw: number = node.width,
+        //     ch: number = node.height,
+        //     appx: number = node.anchorX * cw,
+        //     appy: number = node.anchorY * ch,
+        //     l: number,
+        //     b: number,
+        //     r: number,
+        //     t: number;
 
-        l = - appx;
-        b = - appy;
-        r = cw - appx;
-        t = ch - appy;
+        // l = - appx;
+        // b = - appy;
+        // r = cw - appx;
+        // t = ch - appy;
 
-        let local = this._local;
-        local[0] = l;
-        local[1] = b;
-        local[2] = r;
-        local[3] = t;
+        // let local = this._local;
+        // local[0] = l;
+        // local[1] = b;
+        // local[2] = r;
+        // local[3] = t;
+        // for (let i = 0; i < comp.spriteCount; i++) {
+        //     this.updateWorldVerts(comp, i);
+        // }
+
+        this._local = comp.locals;
         for (let i = 0; i < comp.spriteCount; i++) {
             this.updateWorldVerts(comp, i);
         }
@@ -202,8 +207,10 @@ export default class M3Assembler2D extends cc.Assembler {
             a = matrixm[0], b = matrixm[1], c = matrixm[4], d = matrixm[5],
             tx = matrixm[12], ty = matrixm[13];
 
-        let vl = local[0], vr = local[2],
-            vb = local[1], vt = local[3];
+        let curCount = index;
+
+        let vl = local[0 + index * 4], vr = local[2 + index * 4],
+            vb = local[1 + index * 4], vt = local[3 + index * 4];
 
         /*
         m00 = 1, m01 = 0, m02 = 0, m03 = 0,
@@ -219,7 +226,7 @@ export default class M3Assembler2D extends cc.Assembler {
         // render data = verts = x|y|u|v|color|x|y|u|v|color|...
         // 填充render data中4个顶点的xy部分
         // let index = 0;
-        let curCount = index;
+        // let curCount = index;
         index = index * 5 * 4;
         let floatsPerVert = this.floatsPerVert;
 
@@ -256,20 +263,20 @@ export default class M3Assembler2D extends cc.Assembler {
             // left bottom
             // newx = vl * a + vb * c + tx
             // newy = vl * b + vb * d + ty
-            verts[index] = al + cb + tx;
-            verts[index + 1] = bl + db + ty;
+            verts[index] = al + cb + tx + jx * a;
+            verts[index + 1] = bl + db + ty + jy * d;
             index += floatsPerVert;
             // right bottom
-            verts[index] = ar + cb + tx;
-            verts[index + 1] = br + db + ty;
+            verts[index] = ar + cb + tx + jx * a;
+            verts[index + 1] = br + db + ty + jy * d;
             index += floatsPerVert;
             // left top
-            verts[index] = al + ct + tx;
-            verts[index + 1] = bl + dt + ty;
+            verts[index] = al + ct + tx + jx * a;
+            verts[index + 1] = bl + dt + ty + jy * d;
             index += floatsPerVert;
             // right top
-            verts[index] = ar + ct + tx;
-            verts[index + 1] = br + dt + ty;
+            verts[index] = ar + ct + tx + jx * a;
+            verts[index + 1] = br + dt + ty + jy * d;
         }
     }
 
