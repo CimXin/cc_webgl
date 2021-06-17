@@ -59,16 +59,32 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
         this._local.length = 4;
     }
 
-    updateColor(comp, color) {
+    updateColors(comp) {
+        // for (let i = 0; i < comp.spriteCount; i++) {
+        //     this.updateColor(comp, i);
+        // }
+        this.updateColor(comp);
+    }
+
+    updateColor(comp) {
         // render data = verts = x|y|u|v|color|x|y|u|v|color|...
         // 填充render data中4个顶点的color部分
         let uintVerts = this._renderData.uintVDatas[0];
         if (!uintVerts) return;
-        color = color != null ? color : comp.node.color._val;
+        // color = color != null ? color : comp.node.color._val;
+        let colors = comp.colors as any[];
+
         let floatsPerVert = this.floatsPerVert;
         let colorOffset = this.colorOffset;
+        let index = 0;
         for (let i = colorOffset, l = uintVerts.length; i < l; i += floatsPerVert) {
-            uintVerts[i] = color;
+
+            if (index + 1 <= colors.length) {
+                uintVerts[i] = colors[index]._val;
+                index++;
+            } else {
+                uintVerts[i] = comp.node.color._val;
+            }
         }
     }
 
@@ -193,6 +209,7 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
         if (comp._vertsDirty) {
             this.updateUVs(comp);
             this.updateVerts(comp);
+            this.updateColors(comp);
             comp._vertsDirty = false;
         }
     }
