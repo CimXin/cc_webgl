@@ -78,9 +78,8 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
         let colorOffset = this.colorOffset;
         let index = 0;
         for (let i = colorOffset, l = uintVerts.length; i < l; i += floatsPerVert) {
-
             if (index + 1 <= colors.length) {
-                uintVerts[i] = colors[index]._val;
+                uintVerts[i] = colors[index];
                 index++;
             } else {
                 uintVerts[i] = comp.node.color._val;
@@ -199,7 +198,7 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
         //     this.updateWorldVerts(comp, i);
         // }
 
-        this._local = comp.locals;
+        // this._local = comp.locals;
         for (let i = 0; i < comp.spriteCount; i++) {
             this.updateWorldVerts(comp, i);
         }
@@ -215,8 +214,8 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
     }
 
     /** 更新图片的世界坐标点 */
-    updateWorldVertsWebGL(comp, index) {
-        let local = this._local;
+    updateWorldVertsWebGL(comp: M3AtlasTileMap, index) {
+        // let local = this._local;
         let verts = this._renderData.vDatas[0];
 
         let matrix = comp.node._worldMatrix;
@@ -226,8 +225,8 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
 
         let curCount = index;
 
-        let vl = local[0 + index * 4], vr = local[2 + index * 4],
-            vb = local[1 + index * 4], vt = local[3 + index * 4];
+        // let vl = local[0 + index * 4], vr = local[2 + index * 4],
+        //     vb = local[1 + index * 4], vt = local[3 + index * 4];
 
         /*
         m00 = 1, m01 = 0, m02 = 0, m03 = 0,
@@ -249,52 +248,70 @@ export default class M3AtlasAssembler2D extends cc.Assembler {
 
         //存储的sprite的局部坐标点
 
-        let spritePoses = comp.spritePoses;
+        // let spritePoses = comp.spritePoses;
 
-        let jx = spritePoses[curCount * 2 + 0];
-        let jy = spritePoses[curCount * 2 + 1];
+        // let jx = spritePoses[curCount * 2 + 0];
+        // let jy = spritePoses[curCount * 2 + 1];
 
-        if (justTranslate) {
-            // left bottom
-            verts[index] = vl + tx + jx;
-            verts[index + 1] = vb + ty + jy;
-            index += floatsPerVert;
-            // right bottom
-            verts[index] = vr + tx + jx;
-            verts[index + 1] = vb + ty + jy;
-            index += floatsPerVert;
-            // left top
-            verts[index] = vl + tx + jx;
-            verts[index + 1] = vt + ty + jy;
-            index += floatsPerVert;
-            // right top
-            verts[index] = vr + tx + jx;
-            verts[index + 1] = vt + ty + jy;
-        } else {
-            // 4对xy分别乘以 [2,2]仿射矩阵，然后+平移量
-            let al = a * vl, ar = a * vr,
-                bl = b * vl, br = b * vr,
-                cb = c * vb, ct = c * vt,
-                db = d * vb, dt = d * vt;
+        let vertexs = comp.vertexs;
 
-            // left bottom
-            // newx = vl * a + vb * c + tx
-            // newy = vl * b + vb * d + ty
-            verts[index] = al + cb + tx + jx * a;
-            verts[index + 1] = bl + db + ty + jy * d;
-            index += floatsPerVert;
-            // right bottom
-            verts[index] = ar + cb + tx + jx * a;
-            verts[index + 1] = br + db + ty + jy * d;
-            index += floatsPerVert;
-            // left top
-            verts[index] = al + ct + tx + jx * a;
-            verts[index + 1] = bl + dt + ty + jy * d;
-            index += floatsPerVert;
-            // right top
-            verts[index] = ar + ct + tx + jx * a;
-            verts[index + 1] = br + dt + ty + jy * d;
-        }
+        verts[index] = vertexs[0 + curCount * 8] + tx;//vl + tx + jx;
+        verts[index + 1] = vertexs[1 + curCount * 8] + ty;//vb + ty + jy;
+        index += floatsPerVert;
+        // right bottom
+        verts[index] = vertexs[2 + curCount * 8] + tx;//vr + tx + jx;
+        verts[index + 1] = vertexs[3 + curCount * 8] + ty;//vb + ty + jy;
+        index += floatsPerVert;
+        // left top
+        verts[index] = vertexs[4 + curCount * 8] + tx;//vl + tx + jx;
+        verts[index + 1] = vertexs[5 + curCount * 8] + ty;// vt + ty + jy;
+        index += floatsPerVert;
+        // right top
+        verts[index] = vertexs[6 + curCount * 8] + tx;//vr + tx + jx;
+        verts[index + 1] = vertexs[7 + curCount * 8] + ty;//vt + ty + jy;
+
+        return;
+        // if (justTranslate) {
+        //     // left bottom
+        //     verts[index] = vl + tx + jx;
+        //     verts[index + 1] = vb + ty + jy;
+        //     index += floatsPerVert;
+        //     // right bottom
+        //     verts[index] = vr + tx + jx;
+        //     verts[index + 1] = vb + ty + jy;
+        //     index += floatsPerVert;
+        //     // left top
+        //     verts[index] = vl + tx + jx;
+        //     verts[index + 1] = vt + ty + jy;
+        //     index += floatsPerVert;
+        //     // right top
+        //     verts[index] = vr + tx + jx;
+        //     verts[index + 1] = vt + ty + jy;
+        // } else {
+        //     // 4对xy分别乘以 [2,2]仿射矩阵，然后+平移量
+        //     let al = a * vl, ar = a * vr,
+        //         bl = b * vl, br = b * vr,
+        //         cb = c * vb, ct = c * vt,
+        //         db = d * vb, dt = d * vt;
+
+        //     // left bottom
+        //     // newx = vl * a + vb * c + tx
+        //     // newy = vl * b + vb * d + ty
+        //     verts[index] = al + cb + tx + jx * a;
+        //     verts[index + 1] = bl + db + ty + jy * d;
+        //     index += floatsPerVert;
+        //     // right bottom
+        //     verts[index] = ar + cb + tx + jx * a;
+        //     verts[index + 1] = br + db + ty + jy * d;
+        //     index += floatsPerVert;
+        //     // left top
+        //     verts[index] = al + ct + tx + jx * a;
+        //     verts[index + 1] = bl + dt + ty + jy * d;
+        //     index += floatsPerVert;
+        //     // right top
+        //     verts[index] = ar + ct + tx + jx * a;
+        //     verts[index + 1] = br + dt + ty + jy * d;
+        // }
     }
 
 }

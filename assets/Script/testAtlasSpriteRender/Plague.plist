@@ -7,124 +7,124 @@
             <key>Body1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{294,70},{56,56}}</string>
+                <string>{{466,867},{60,60}}</string>
                 <key>offset</key>
-                <string>{-2,-2}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,4},{56,56}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{294,132},{56,40}}</string>
+                <string>{{400,867},{60,60}}</string>
                 <key>offset</key>
-                <string>{-1,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,20},{56,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{240,376},{50,50}}</string>
+                <string>{{466,801},{60,60}}</string>
                 <key>offset</key>
-                <string>{-3,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{2,5},{50,50}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{72,208},{50,40}}</string>
+                <string>{{400,801},{60,60}}</string>
                 <key>offset</key>
-                <string>{-1,-2}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{4,12},{50,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body5.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{180,973},{34,30}}</string>
+                <string>{{334,867},{60,60}}</string>
                 <key>offset</key>
-                <string>{6,1}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{19,14},{34,30}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body6.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,610},{24,20}}</string>
+                <string>{{334,801},{60,60}}</string>
                 <key>offset</key>
-                <string>{4,-2}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{22,22},{24,20}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body7.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,973},{38,30}}</string>
+                <string>{{466,735},{60,60}}</string>
                 <key>offset</key>
-                <string>{4,-2}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{15,17},{38,30}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Body8.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{240,432},{24,44}}</string>
+                <string>{{400,735},{60,60}}</string>
                 <key>offset</key>
-                <string>{1,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{19,8},{24,44}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>CornerTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{294,178},{58,54}}</string>
+                <string>{{334,735},{60,60}}</string>
                 <key>offset</key>
-                <string>{-1,-3}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,6},{58,54}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>CornerTR0.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{180,244},{60,60}}</string>
+                <string>{{268,864},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +137,7 @@
             <key>EdgeCross1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,924},{60,60}}</string>
+                <string>{{268,798},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +150,7 @@
             <key>EdgeCross2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,858},{60,60}}</string>
+                <string>{{202,864},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +163,7 @@
             <key>EdgeFull.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,792},{60,60}}</string>
+                <string>{{202,798},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -176,20 +176,20 @@
             <key>EdgeInB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,511},{60,40}}</string>
+                <string>{{136,867},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,20},{60,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeInBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,726},{60,60}}</string>
+                <string>{{136,801},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -202,7 +202,7 @@
             <key>EdgeInBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,660},{60,60}}</string>
+                <string>{{70,882},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -215,46 +215,46 @@
             <key>EdgeInL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,775},{38,60}}</string>
+                <string>{{70,816},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{38,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeInR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,247},{38,60}}</string>
+                <string>{{4,882},{60,60}}</string>
                 <key>offset</key>
-                <string>{11,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{22,0},{38,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeInT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{188,638},{60,36}}</string>
+                <string>{{4,816},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeInTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,594},{60,60}}</string>
+                <string>{{466,669},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -267,7 +267,7 @@
             <key>EdgeInTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,528},{60,60}}</string>
+                <string>{{400,669},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -280,124 +280,124 @@
             <key>EdgeOutB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{248,310},{60,36}}</string>
+                <string>{{70,750},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{296,416},{38,36}}</string>
+                <string>{{4,750},{60,60}}</string>
                 <key>offset</key>
-                <string>{11,12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{22,0},{38,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{118,205},{38,36}}</string>
+                <string>{{268,732},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{38,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{118,139},{38,60}}</string>
+                <string>{{136,735},{60,60}}</string>
                 <key>offset</key>
-                <string>{11,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{22,0},{38,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,379},{40,60}}</string>
+                <string>{{202,732},{60,60}}</string>
                 <key>offset</key>
-                <string>{-10,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{40,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,445},{60,40}}</string>
+                <string>{{334,669},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,20},{60,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{308,880},{38,38}}</string>
+                <string>{{466,603},{60,60}}</string>
                 <key>offset</key>
-                <string>{11,-11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{22,22},{38,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeOutTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{272,748},{38,38}}</string>
+                <string>{{400,603},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,-11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,22},{38,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>EdgeSecondLayer.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,4},{68,66}}</string>
+                <string>{{90,4},{80,80}}</string>
                 <key>offset</key>
-                <string>{0,1}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{6,6},{68,66}}</string>
+                <string>{{0,0},{80,80}}</string>
                 <key>sourceSize</key>
                 <string>{80,80}</string>
             </dict>
             <key>SecondLayer_EdgeCross1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,462},{60,60}}</string>
+                <string>{{70,684},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -410,7 +410,7 @@
             <key>SecondLayer_EdgeCross2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,396},{60,60}}</string>
+                <string>{{4,684},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -423,7 +423,7 @@
             <key>SecondLayer_EdgeFull_1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,330},{60,60}}</string>
+                <string>{{268,666},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -436,7 +436,7 @@
             <key>SecondLayer_EdgeFull_2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{70,264},{60,60}}</string>
+                <string>{{136,669},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -449,7 +449,7 @@
             <key>SecondLayer_EdgeFull_3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,136},{60,60}}</string>
+                <string>{{202,666},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -462,7 +462,7 @@
             <key>SecondLayer_EdgeFull_4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{162,136},{60,60}}</string>
+                <string>{{334,603},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -475,20 +475,20 @@
             <key>SecondLayer_EdgeInB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,202},{60,36}}</string>
+                <string>{{466,537},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,24},{60,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeInBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,70},{60,60}}</string>
+                <string>{{400,537},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -501,7 +501,7 @@
             <key>SecondLayer_EdgeInBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{162,70},{60,60}}</string>
+                <string>{{70,618},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -514,46 +514,46 @@
             <key>SecondLayer_EdgeInL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{180,907},{34,60}}</string>
+                <string>{{4,618},{60,60}}</string>
                 <key>offset</key>
-                <string>{-13,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{34,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeInR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{296,350},{34,60}}</string>
+                <string>{{268,600},{60,60}}</string>
                 <key>offset</key>
-                <string>{13,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{26,0},{34,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeInT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{180,841},{60,32}}</string>
+                <string>{{136,603},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,14}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,32}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeInTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,886},{60,60}}</string>
+                <string>{{202,600},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -566,7 +566,7 @@
             <key>SecondLayer_EdgeInTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,820},{60,60}}</string>
+                <string>{{334,537},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -579,111 +579,111 @@
             <key>SecondLayer_EdgeOutB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{180,775},{60,32}}</string>
+                <string>{{466,471},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,14}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,32}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{218,868},{32,32}}</string>
+                <string>{{400,471},{60,60}}</string>
                 <key>offset</key>
-                <string>{14,14}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{28,0},{32,32}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{230,692},{34,32}}</string>
+                <string>{{70,552},{60,60}}</string>
                 <key>offset</key>
-                <string>{-13,14}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{34,32}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{290,310},{34,60}}</string>
+                <string>{{4,552},{60,60}}</string>
                 <key>offset</key>
-                <string>{13,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{26,0},{34,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{188,704},{34,60}}</string>
+                <string>{{268,534},{60,60}}</string>
                 <key>offset</key>
-                <string>{-13,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{34,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{162,202},{60,36}}</string>
+                <string>{{136,537},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,24},{60,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{304,924},{34,34}}</string>
+                <string>{{202,534},{60,60}}</string>
                 <key>offset</key>
-                <string>{13,-13}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{26,26},{34,34}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_EdgeOutTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,924},{34,34}}</string>
+                <string>{{334,471},{60,60}}</string>
                 <key>offset</key>
-                <string>{-13,-13}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,26},{34,34}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeCross1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,754},{60,60}}</string>
+                <string>{{466,405},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -696,7 +696,7 @@
             <key>SecondLayer_v2_EdgeCross2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,688},{60,60}}</string>
+                <string>{{400,405},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -709,20 +709,20 @@
             <key>SecondLayer_v2_EdgeInB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,577},{60,42}}</string>
+                <string>{{70,486},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-9}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,18},{60,42}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeInBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,622},{60,60}}</string>
+                <string>{{4,486},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -735,7 +735,7 @@
             <key>SecondLayer_v2_EdgeInBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,556},{60,60}}</string>
+                <string>{{268,468},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -748,46 +748,46 @@
             <key>SecondLayer_v2_EdgeInL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{118,73},{38,60}}</string>
+                <string>{{136,471},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{38,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeInR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,313},{40,60}}</string>
+                <string>{{202,468},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,0},{40,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeInT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,907},{60,38}}</string>
+                <string>{{334,405},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeInTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,490},{60,60}}</string>
+                <string>{{466,339},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -800,7 +800,7 @@
             <key>SecondLayer_v2_EdgeInTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,424},{60,60}}</string>
+                <string>{{400,339},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -813,241 +813,241 @@
             <key>SecondLayer_v2_EdgeOutB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,841},{60,38}}</string>
+                <string>{{70,420},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,880},{40,38}}</string>
+                <string>{{4,420},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,0},{40,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutBL_RR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,880},{40,38}}</string>
+                <string>{{4,420},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,0},{40,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,730},{38,38}}</string>
+                <string>{{268,402},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{38,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutBR_LL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,730},{38,38}}</string>
+                <string>{{268,402},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{38,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{72,142},{40,60}}</string>
+                <string>{{136,405},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,0},{40,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{72,76},{40,60}}</string>
+                <string>{{202,402},{60,60}}</string>
                 <key>offset</key>
-                <string>{-10,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{40,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{246,244},{60,42}}</string>
+                <string>{{334,339},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-9}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,18},{60,42}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,792},{40,40}}</string>
+                <string>{{466,273},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,20},{40,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutTL_RL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{264,792},{40,40}}</string>
+                <string>{{466,273},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,20},{40,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{220,954},{38,40}}</string>
+                <string>{{400,273},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,20},{38,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v2_EdgeOutTR_LR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{220,954},{38,40}}</string>
+                <string>{{400,273},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,20},{38,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeBLR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,510},{38,44}}</string>
+                <string>{{70,354},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,-8}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,16},{38,44}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeBLT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{270,610},{42,40}}</string>
+                <string>{{4,354},{60,60}}</string>
                 <key>offset</key>
-                <string>{-9,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,20},{42,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeBLTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{218,820},{38,42}}</string>
+                <string>{{268,336},{60,60}}</string>
                 <key>offset</key>
-                <string>{-11,-9}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,18},{38,42}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeBRL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{288,462},{40,42}}</string>
+                <string>{{136,339},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,-9}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,18},{40,42}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeBRT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,462},{44,42}}</string>
+                <string>{{202,336},{60,60}}</string>
                 <key>offset</key>
-                <string>{8,-9}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{16,18},{44,42}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeBRTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{218,774},{40,40}}</string>
+                <string>{{334,273},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,-10}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,20},{40,40}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeCross1.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,358},{60,60}}</string>
+                <string>{{466,207},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -1060,7 +1060,7 @@
             <key>SecondLayer_v3_EdgeCross2.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,292},{60,60}}</string>
+                <string>{{400,207},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -1073,7 +1073,7 @@
             <key>SecondLayer_v3_EdgeCross3.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{290,4},{60,60}}</string>
+                <string>{{70,288},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -1086,7 +1086,7 @@
             <key>SecondLayer_v3_EdgeCross4.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{224,4},{60,60}}</string>
+                <string>{{4,288},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -1099,364 +1099,364 @@
             <key>SecondLayer_v3_EdgeInBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,506},{60,50}}</string>
+                <string>{{268,270},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-5}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,10},{60,50}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,952},{60,50}}</string>
+                <string>{{136,273},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,-5}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,10},{60,50}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInLB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,440},{50,60}}</string>
+                <string>{{202,270},{60,60}}</string>
                 <key>offset</key>
-                <string>{-5,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{50,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInLT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{184,572},{48,60}}</string>
+                <string>{{334,207},{60,60}}</string>
                 <key>offset</key>
-                <string>{-6,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{48,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInRB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,374},{52,60}}</string>
+                <string>{{70,222},{60,60}}</string>
                 <key>offset</key>
-                <string>{4,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{8,0},{52,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInRT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{294,242},{52,60}}</string>
+                <string>{{4,222},{60,60}}</string>
                 <key>offset</key>
-                <string>{4,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{8,0},{52,60}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,709},{60,46}}</string>
+                <string>{{268,204},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,7}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,46}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeInTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{136,643},{60,46}}</string>
+                <string>{{136,207},{60,60}}</string>
                 <key>offset</key>
-                <string>{0,7}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{60,46}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,560},{44,32}}</string>
+                <string>{{202,204},{60,60}}</string>
                 <key>offset</key>
-                <string>{8,14}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{16,0},{44,32}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{282,510},{44,32}}</string>
+                <string>{{70,156},{60,60}}</string>
                 <key>offset</key>
-                <string>{-8,14}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{44,32}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutLB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,610},{34,44}}</string>
+                <string>{{4,156},{60,60}}</string>
                 <key>offset</key>
-                <string>{-13,8}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{34,44}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutLT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{230,638},{34,48}}</string>
+                <string>{{136,141},{60,60}}</string>
                 <key>offset</key>
-                <string>{-13,-6}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,12},{34,48}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutRB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,708},{34,38}}</string>
+                <string>{{70,90},{60,60}}</string>
                 <key>offset</key>
-                <string>{13,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{26,0},{34,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutRT.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,660},{34,42}}</string>
+                <string>{{4,90},{60,60}}</string>
                 <key>offset</key>
-                <string>{13,-9}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{26,18},{34,42}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutTL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{308,838},{40,36}}</string>
+                <string>{{440,141},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,-12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,24},{40,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeOutTR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{220,906},{42,36}}</string>
+                <string>{{374,141},{60,60}}</string>
                 <key>offset</key>
-                <string>{-9,-12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,24},{42,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeTLB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{310,794},{40,38}}</string>
+                <string>{{308,138},{60,60}}</string>
                 <key>offset</key>
-                <string>{-10,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{40,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeTLBR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{272,702},{40,38}}</string>
+                <string>{{242,138},{60,60}}</string>
                 <key>offset</key>
-                <string>{-10,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{40,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeTLR.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{262,838},{40,36}}</string>
+                <string>{{453,75},{60,60}}</string>
                 <key>offset</key>
-                <string>{-10,12}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{40,36}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeTRB.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{238,560},{44,38}}</string>
+                <string>{{387,75},{60,60}}</string>
                 <key>offset</key>
-                <string>{8,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{16,0},{44,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeTRBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{316,752},{36,34}}</string>
+                <string>{{321,72},{60,60}}</string>
                 <key>offset</key>
-                <string>{12,13}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{24,0},{36,34}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>SecondLayer_v3_EdgeTRL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{270,658},{40,38}}</string>
+                <string>{{176,75},{60,60}}</string>
                 <key>offset</key>
-                <string>{10,11}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{20,0},{40,38}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
                 <string>{60,60}</string>
             </dict>
             <key>Sota.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,76},{70,62}}</string>
+                <string>{{4,4},{80,80}}</string>
                 <key>offset</key>
-                <string>{2,-1}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{7,10},{70,62}}</string>
+                <string>{{0,0},{80,80}}</string>
                 <key>sourceSize</key>
                 <string>{80,80}</string>
             </dict>
             <key>plague_bomb.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{78,4},{69,63}}</string>
+                <string>{{176,4},{71,65}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,1},{69,63}}</string>
+                <string>{{0,0},{71,65}}</string>
                 <key>sourceSize</key>
                 <string>{71,65}</string>
             </dict>
             <key>plague_dynamit.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,152},{63,62}}</string>
+                <string>{{401,4},{65,66}}</string>
                 <key>offset</key>
-                <string>{0,2}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <true/>
                 <key>sourceColorRect</key>
-                <string>{{1,0},{63,62}}</string>
+                <string>{{0,0},{65,66}}</string>
                 <key>sourceSize</key>
                 <string>{65,66}</string>
             </dict>
             <key>plague_firerocket.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{182,310},{60,58}}</string>
+                <string>{{253,72},{62,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,1},{60,58}}</string>
+                <string>{{0,0},{62,60}}</string>
                 <key>sourceSize</key>
                 <string>{62,60}</string>
             </dict>
             <key>plague_light.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{4,221},{65,60}}</string>
+                <string>{{328,4},{67,62}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
-                <true/>
+                <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,1},{65,60}}</string>
+                <string>{{0,0},{67,62}}</string>
                 <key>sourceSize</key>
                 <string>{67,62}</string>
             </dict>
             <key>plague_tnt.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{153,4},{65,60}}</string>
+                <string>{{253,4},{69,62}}</string>
                 <key>offset</key>
-                <string>{-1,0}</string>
+                <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{1,1},{65,60}}</string>
+                <string>{{0,0},{69,62}}</string>
                 <key>sourceSize</key>
                 <string>{69,62}</string>
             </dict>
@@ -1468,9 +1468,9 @@
             <key>realTextureFileName</key>
             <string>Plague.png</string>
             <key>size</key>
-            <string>{354,1007}</string>
+            <string>{530,946}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2a8110e1abe9cb889f3a1547fba71052$</string>
+            <string>$TexturePacker:SmartUpdate:b4dd2c004dc2ad723b38b7b5a50d5472$</string>
             <key>textureFileName</key>
             <string>Plague.png</string>
         </dict>

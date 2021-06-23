@@ -1,0 +1,29 @@
+{
+  "__type__": "cc.Material",
+  "_name": "testLightingRay",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "78909bfd-2baf-443d-b0c1-52ad6baac6c8"
+  },
+  "_techniqueIndex": 0,
+  "_techniqueData": {
+    "0": {
+      "defines": {
+        "USE_TEXTURE": true
+      },
+      "props": {
+        "u_time": 0.7,
+        "u_distance": 0.16,
+        "u_offset": 0.3,
+        "u_cutTime": 0.3,
+        "sampler1": {
+          "__uuid__": "92033a34-3598-440f-9ba0-c83984810b32"
+        },
+        "sampler2": {
+          "__uuid__": "02dc29c0-cddb-4ae3-97cd-00bfc43e078e"
+        }
+      }
+    }
+  }
+}

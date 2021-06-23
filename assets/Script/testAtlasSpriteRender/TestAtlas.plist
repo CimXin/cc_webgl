@@ -4,31 +4,18 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>Wall_bottom.png</key>
+            <key>EdgeOutBL.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{124,2},{120,120}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{120,120}}</string>
+                <string>{{0,0},{60,60}}</string>
                 <key>sourceSize</key>
-                <string>{120,120}</string>
-            </dict>
-            <key>Wall_top.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{120,120}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{120,120}}</string>
-                <key>sourceSize</key>
-                <string>{120,120}</string>
+                <string>{60,60}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -38,9 +25,9 @@
             <key>realTextureFileName</key>
             <string>TestAtlas.png</string>
             <key>size</key>
-            <string>{246,124}</string>
+            <string>{60,60}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:1494c2dc9aa0eb12ee9e80a2340e0fd0$</string>
+            <string>$TexturePacker:SmartUpdate:c9ba9ffd53cb31bf4efcc8984e625fb9$</string>
             <key>textureFileName</key>
             <string>TestAtlas.png</string>
         </dict>
